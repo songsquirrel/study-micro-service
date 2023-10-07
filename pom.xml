@@ -12,7 +12,6 @@
         <module>dubbo-example-interface</module>
         <module>dubbo-example-provider</module>
         <module>dubbo-example-consumer</module>
-        <module>dubbo-example-rest</module>
     </modules>
 
     <properties>
@@ -101,7 +100,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
 
         </dependencies>
     </dependencyManagement>
