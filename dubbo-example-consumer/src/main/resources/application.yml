@@ -1,0 +1,18 @@
+dubbo:
+  protocol:
+    name: tri
+    port: -1
+  registry:
+#    nacos需开放9984端口：grpc协议
+    address: nacos://${spring.cloud.nacos.server-addr:112.124.23.224:8848}
+    group: dubbo
+spring:
+  application:
+    name: dubbo-example-rest-api
+  cloud:
+    nacos:
+      server-addr: 112.124.23.224:8848
+      discovery:
+        group: restful-api
+server:
+  port: 8080

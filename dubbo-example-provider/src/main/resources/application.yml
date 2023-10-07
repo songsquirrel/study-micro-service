@@ -1,0 +1,10 @@
+dubbo:
+  application:
+    name: dubbo-example-provider
+  protocol:
+    name: tri
+    port: -1
+  registry:
+    address: nacos://112.124.23.224:8848
+    group: dubbo
+
