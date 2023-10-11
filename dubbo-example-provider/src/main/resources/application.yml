@@ -1,10 +1,27 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: dubbo-example-provider
 dubbo:
   application:
     name: dubbo-example-provider
+#    配置中心
+  config-center:
+    address: nacos://112.124.23.224:8848
+    config-file: config-common.yml
+    app-config-file: app-config.yml
+    group: micro-service
   protocol:
+#    指定dubbo协议
     name: tri
     port: -1
+  #    注册中心
   registry:
     address: nacos://112.124.23.224:8848
     group: dubbo
-
+#    dubbo3默认采用“应用级+接口级服务发现”双注册模式，可以通过此配置更改注册行为，instance/interface/all
+    register-mode: instance
+logging:
+  config: classpath:log4j2-${spring.profiles.active}.xml
+#  config: http://${spring.cloud.nacos.server-addr}/nacos/v1/cs/configs?group=micro-service&tenant=public&dataId=log4j2-dev.xml

@@ -9,10 +9,15 @@ dubbo:
 spring:
   application:
     name: dubbo-example-rest-api
-  cloud:
-    nacos:
-      server-addr: 112.124.23.224:8848
-      discovery:
-        group: restful-api
+  profiles:
+    active: dev
+#  cloud:
+#    nacos:
+#      server-addr: 112.124.23.224:8848
+#      discovery:
+#        group: restful-api
 server:
   port: 8080
+logging:
+  config: classpath:log4j2-${spring.profiles.active}.xml
+#  config: http://${spring.cloud.nacos.server-addr}/nacos/v1/cs/configs?group=micro-service&tenant=public&dataId=log4j2.xml
