@@ -13,7 +13,7 @@
         <!-- %highlight{[%-5.5level]}{STYLE=Logback} 表示此字段使用Logback格式的高亮颜色展示，最少长度为5，不足空格补齐，超出5则只保留后5位  -->
         <!-- %blue{[%-5.5X{uid}]} 表示此上下文字段采用蓝色进行输出，最少长度为5，不足空格补齐，超出5则只保留后5位  -->
 <!--        <Property name="LOG_PATTERN_LAYOUT">%d{HH:mm:ss,SSS} %highlight{[%-5level]}{STYLE=Logback} [%-5.5thread] %blue{[%-5.5X{uid}]} %cyan{[%-40.40c{1.}:%-4line]} - %msg%xEx%n-->
-        <Property name="LOG_PATTERN_LAYOUT">%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %highlight{[%-4.4level]}{STYLE=Logback} %logger{36} - %msg%n</Property>
+        <Property name="LOG_PATTERN_LAYOUT">%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] {[%-5.5level]} %logger{36} - %msg%n</Property>
         <Property name="DEFAULT_CHARSET">UTF-8</Property>
         <Property name="ERROR_FILE_NAME">error</Property>
         <Property name="INFO_FILE_NAME">info</Property>

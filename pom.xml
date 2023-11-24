@@ -12,6 +12,7 @@
         <module>dubbo-example-interface</module>
         <module>dubbo-example-provider</module>
         <module>dubbo-example-consumer</module>
+        <module>basic</module>
     </modules>
 
     <properties>
@@ -26,16 +27,12 @@
     </properties>
 
     <dependencies>
-        <!--        服务注册到nacos，开启配置中心与注册中心功能-->
+        <!-- 服务注册到nacos，开启注册中心(包含配置中心)功能 -->
         <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-registry-nacos</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.apache.dubbo</groupId>-->
-<!--            <artifactId>dubbo-config-nacos</artifactId>-->
-<!--        </dependency>-->
-        <!--指定序列化工具，可一定程度提高性能-->
+        <!-- 指定序列化工具，可一定程度提高性能 -->
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
