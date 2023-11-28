@@ -38,6 +38,10 @@ public class DistributedLockAop {
         return null;
     }
 
+    private String getLockName(Method method, Object[] args) {
+        return method.getName() + "_" + args;
+    }
+
 
     private RLock lock(String lockName, DistributedLock distributedLock) throws InterruptedException {
         RLock lock = redissonClient.getLock(lockName);
